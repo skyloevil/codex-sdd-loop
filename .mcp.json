@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "openspec-assistant": {
+      "command": "node",
+      "args": ["mcp-server/dist/index.js"],
+      "env": {}
+    }
+  }
+}
