@@ -3,7 +3,7 @@
   "version": "0.3.1",
   "description": "Automates OpenSpec-style spec-driven development workflows in Codex: propose, plan, implement, validate, archive.",
   "author": {
-    "name": "skyloevil",
+    "name": "ZITIAN ZHAO",
     "url": "https://github.com/skyloevil"
   },
   "repository": "https://github.com/skyloevil/openspec-assistant",
@@ -22,7 +22,7 @@
     "displayName": "OpenSpec Assistant",
     "shortDescription": "Spec-driven development workflow for Codex",
     "longDescription": "OpenSpec Assistant transforms AI coding from one-shot code generation into a structured, auditable engineering workflow.\n\n**Workflow**:\n1. **Propose** -- Generate change-scoped proposal artifacts under openspec/changes/<changeId>\n2. **Plan** -- Create specs, design, tasks, verification, and implementation notes from schema templates\n3. **Implement** -- Execute tasks with automatic progress tracking\n4. **Validate** -- Check artifact, task, hook, and spec-vs-code drift\n5. **Archive** -- Store change artifacts and accumulate knowledge base\n\n**Key Features**:\n- Human-in-the-loop at critical gates (scope, design, destructive changes), auto-pilot for routine steps\n- Persistent multi-change state tracking -- resume interrupted workflows without re-explaining\n- Customizable config, schema templates, and hook points for injecting MCP tools and skills per team workflow\n- Archive knowledge accumulation across projects",
-    "developerName": "OpenSpec Team",
+    "developerName": "ZITIAN ZHAO",
     "category": "Developer Tools",
     "capabilities": [
       "Interactive",
