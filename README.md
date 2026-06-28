@@ -114,6 +114,8 @@ TAPD_API_PASSWORD=your_tapd_api_password
 
 The bundled TAPD MCP adapter also attempts to load `.tapd.env.local` from the current project root and from the OpenSpec Assistant plugin root. If another project cannot see `tapd-requirement:fetch_story`, reload Codex MCP servers after updating the plugin and confirm that the plugin MCP server is exposed in that session. If the tool is visible but fails with missing credentials, the MCP process cannot see `TAPD_API_USER` or `TAPD_API_PASSWORD`.
 
+The plugin MCP configuration uses plugin-root-relative commands (`cwd: "."` with `./...` paths), so the OpenSpec and TAPD MCP tools are available from any project directory once the plugin is installed and MCP servers are reloaded.
+
 After reloading Codex MCP servers, trigger proposal generation with a TAPD story URL:
 
 ```text

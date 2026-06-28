@@ -2,12 +2,14 @@
   "mcpServers": {
     "openspec-assistant": {
       "command": "node",
-      "args": ["mcp-server/dist/index.js"],
+      "args": ["./mcp-server/dist/index.js"],
+      "cwd": ".",
       "env": {}
     },
     "tapd-requirement": {
       "command": "node",
-      "args": ["scripts/tapd-mcp-server.mjs"],
+      "args": ["./scripts/tapd-mcp-server.mjs"],
+      "cwd": ".",
       "env": {
         "TAPD_API_BASE": "https://api.tapd.cn"
       }

@@ -1,6 +1,6 @@
 {
   "name": "openspec-assistant-mcp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "MCP server for OpenSpec Assistant plugin - spec-driven development workflow automation",
   "type": "module",
   "bin": {

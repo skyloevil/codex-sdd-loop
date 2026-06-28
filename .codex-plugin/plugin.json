@@ -1,6 +1,6 @@
 {
   "name": "openspec-assistant",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Automates OpenSpec-style spec-driven development workflows in Codex: propose, plan, implement, validate, archive.",
   "author": {
     "name": "skyloevil",
