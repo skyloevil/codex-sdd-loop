@@ -1,5 +1,7 @@
+<h1 align="center">Codex SDD Loop</h1>
+
 <p align="center">
-  <img src="./assets/project-hero.png" alt="OpenSpec Assistant - spec-driven AI coding workflow" width="100%">
+  <img src="./assets/project-hero.png" alt="Codex SDD Loop - spec-driven AI coding workflow" width="100%">
 </p>
 
 <p align="center">
@@ -7,17 +9,17 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/skyloevil/openspec-assistant/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-  <a href="https://github.com/skyloevil/openspec-assistant"><img alt="Codex Plugin" src="https://img.shields.io/badge/Codex-plugin-2563EB"></a>
+  <a href="https://github.com/skyloevil/codex-sdd-loop/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <a href="https://github.com/skyloevil/codex-sdd-loop"><img alt="Codex Plugin" src="https://img.shields.io/badge/Codex-plugin-2563EB"></a>
   <a href="./mcp-server/package.json"><img alt="Node.js 18+" src="https://img.shields.io/badge/node-%3E%3D18-339933"></a>
   <a href="https://modelcontextprotocol.io"><img alt="MCP" src="https://img.shields.io/badge/MCP-server-111827"></a>
 </p>
 
 ---
 
-## What is OpenSpec Assistant?
+## What is Codex SDD Loop?
 
-OpenSpec Assistant is a Codex plugin that brings the OpenSpec development loop into everyday AI-assisted engineering. Instead of jumping directly from a prompt to code, it keeps every change inside a traceable workflow:
+Codex SDD Loop is a Codex plugin that brings the OpenSpec development loop into everyday AI-assisted engineering. Instead of jumping directly from a prompt to code, it keeps every change inside a traceable workflow:
 
 1. **Propose** - clarify scope, background, out-of-scope work, and acceptance criteria.
 2. **Plan** - generate specs, design notes, task lists, verification plans, and implementation notes.
@@ -46,8 +48,8 @@ The plugin is built around Codex skills plus a local MCP server. Skills guide th
 ### Install from GitHub
 
 ```bash
-git clone https://github.com/skyloevil/openspec-assistant.git
-cd openspec-assistant
+git clone https://github.com/skyloevil/codex-sdd-loop.git
+cd codex-sdd-loop
 npm install --prefix mcp-server
 npm run build --prefix mcp-server
 ```
@@ -57,7 +59,7 @@ Then install the plugin in Codex:
 1. Open **Codex Settings**.
 2. Go to **Plugins**.
 3. Choose **Add from folder**.
-4. Select the cloned `openspec-assistant` directory.
+4. Select the cloned `codex-sdd-loop` directory.
 
 The plugin manifest is in `.codex-plugin/plugin.json`, and the MCP server configuration is in `.mcp.json`.
 
@@ -66,7 +68,7 @@ The plugin manifest is in `.codex-plugin/plugin.json`, and the MCP server config
 Start with a request in Codex:
 
 ```text
-Use OpenSpec Assistant to propose: Add user avatar upload
+Use Codex SDD Loop to propose: Add user avatar upload
 ```
 
 The workflow creates a change directory like this:
@@ -84,22 +86,22 @@ openspec/changes/add-user-avatar-upload-20260627/
 After the proposal is reviewed, continue the flow:
 
 ```text
-Use OpenSpec Assistant to plan this change
-Use OpenSpec Assistant to implement the next task
-Use OpenSpec Assistant to validate the current change
-Use OpenSpec Assistant to archive the completed change
+Use Codex SDD Loop to plan this change
+Use Codex SDD Loop to implement the next task
+Use Codex SDD Loop to validate the current change
+Use Codex SDD Loop to archive the completed change
 ```
 
 You can also recover context at any point:
 
 ```text
-Use OpenSpec Assistant to show status
-Use OpenSpec Assistant to continue
+Use Codex SDD Loop to show status
+Use Codex SDD Loop to continue
 ```
 
 ## Optional TAPD Requirement Import
 
-OpenSpec Assistant includes an optional `tapd-requirement` MCP adapter that can fetch a TAPD story before proposal generation. This is useful when the source requirement lives in TAPD and the Codex prompt only contains a story URL.
+Codex SDD Loop includes an optional `tapd-requirement` MCP adapter that can fetch a TAPD story before proposal generation. This is useful when the source requirement lives in TAPD and the Codex prompt only contains a story URL.
 
 Before using TAPD import, configure your TAPD API account and password in your local environment. Do not commit real credentials to this repository.
 
@@ -112,21 +114,21 @@ TAPD_API_PASSWORD=your_tapd_api_password
 
 `.tapd.env.local` is ignored by git. For Codex plugin usage, provide the same variables through your shell environment, personal Codex MCP configuration, or another local secret mechanism available to your Codex runtime.
 
-The bundled TAPD MCP adapter also attempts to load `.tapd.env.local` from the current project root and from the OpenSpec Assistant plugin root. If another project cannot see `tapd-requirement:fetch_story`, reload Codex MCP servers after updating the plugin and confirm that the plugin MCP server is exposed in that session. If the tool is visible but fails with missing credentials, the MCP process cannot see `TAPD_API_USER` or `TAPD_API_PASSWORD`.
+The bundled TAPD MCP adapter also attempts to load `.tapd.env.local` from the current project root and from the Codex SDD Loop plugin root. If another project cannot see `tapd-requirement:fetch_story`, reload Codex MCP servers after updating the plugin and confirm that the plugin MCP server is exposed in that session. If the tool is visible but fails with missing credentials, the MCP process cannot see `TAPD_API_USER` or `TAPD_API_PASSWORD`.
 
 The plugin MCP configuration uses plugin-root-relative commands (`cwd: "."` with `./...` paths), so the OpenSpec and TAPD MCP tools are available from any project directory once the plugin is installed and MCP servers are reloaded.
 
 After reloading Codex MCP servers, trigger proposal generation with a TAPD story URL:
 
 ```text
-Use OpenSpec Assistant to propose https://www.tapd.cn/tapd_fe/<workspace_id>/story/detail/<story_id>
+Use Codex SDD Loop to propose https://www.tapd.cn/tapd_fe/<workspace_id>/story/detail/<story_id>
 ```
 
 The TAPD adapter parses the URL, calls the TAPD stories API, and returns normalized `proposalInput` fields for the OpenSpec proposal workflow. The raw TAPD API response is also included for custom field inspection.
 
 ## Commands and Skills
 
-OpenSpec Assistant ships with focused Codex skills:
+Codex SDD Loop ships with focused Codex skills:
 
 | Skill | Purpose |
 | --- | --- |
@@ -220,7 +222,7 @@ This file is intentionally project-local so Codex can resume an interrupted Open
 Initialize a project to create the default OpenSpec workspace:
 
 ```text
-Use OpenSpec Assistant to initialize this project
+Use Codex SDD Loop to initialize this project
 ```
 
 Generated configuration lives in:
@@ -280,7 +282,7 @@ npm run dev --prefix mcp-server
 ## Project Structure
 
 ```text
-openspec-assistant/
+codex-sdd-loop/
   .codex-plugin/
     plugin.json
   .mcp.json
@@ -327,4 +329,4 @@ Contributions are welcome. Please keep changes spec-driven:
 
 ## License
 
-OpenSpec Assistant is released under the [MIT License](./LICENSE).
+Codex SDD Loop is released under the [MIT License](./LICENSE).

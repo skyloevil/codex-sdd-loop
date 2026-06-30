@@ -1,10 +1,10 @@
 {
-  "name": "openspec-assistant-mcp",
+  "name": "codex-sdd-loop",
   "version": "0.3.1",
-  "description": "MCP server for OpenSpec Assistant plugin - spec-driven development workflow automation",
+  "description": "MCP server for Codex SDD Loop - spec-driven loop engineering runtime for Codex",
   "type": "module",
   "bin": {
-    "openspec-assistant-mcp": "./dist/index.js"
+    "codex-sdd-loop-mcp": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
