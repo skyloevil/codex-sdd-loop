@@ -1,6 +1,6 @@
 ---
-name: openspec-assistant:continue
-description: Resume the active OpenSpec Assistant workflow by selecting the next action from the state machine.
+name: codex-sdd-loop:continue
+description: Resume the active Codex SDD Loop workflow by selecting the next action from the state machine.
 ---
 
 # OpenSpec Continue

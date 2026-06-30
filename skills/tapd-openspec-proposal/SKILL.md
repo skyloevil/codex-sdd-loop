@@ -1,5 +1,5 @@
 ---
-name: openspec-assistant:tapd-openspec-proposal
+name: codex-sdd-loop:tapd-openspec-proposal
 description: Fetch TAPD story requirements before OpenSpec proposal generation. Use when the user asks OpenSpec propose with a TAPD story URL/id, says to import TAPD requirements, or asks to generate proposal.md from TAPD.
 ---
 

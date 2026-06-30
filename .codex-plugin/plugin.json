@@ -1,15 +1,17 @@
 {
-  "name": "openspec-assistant",
+  "name": "codex-sdd-loop",
   "version": "0.3.1",
-  "description": "Automates OpenSpec-style spec-driven development workflows in Codex: propose, plan, implement, validate, archive.",
+  "description": "Spec-driven loop engineering runtime for Codex: propose, plan, implement, validate, archive, and continue with evidence.",
   "author": {
     "name": "ZITIAN ZHAO",
     "url": "https://github.com/skyloevil"
   },
-  "repository": "https://github.com/skyloevil/openspec-assistant",
+  "repository": "https://github.com/skyloevil/codex-sdd-loop",
   "license": "MIT",
   "keywords": [
     "openspec",
+    "sdd",
+    "loop-engineering",
     "spec-driven",
     "workflow",
     "codex",
@@ -19,9 +21,9 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "OpenSpec Assistant",
-    "shortDescription": "Spec-driven development workflow for Codex",
-    "longDescription": "OpenSpec Assistant transforms AI coding from one-shot code generation into a structured, auditable engineering workflow.\n\n**Workflow**:\n1. **Propose** -- Generate change-scoped proposal artifacts under openspec/changes/<changeId>\n2. **Plan** -- Create specs, design, tasks, verification, and implementation notes from schema templates\n3. **Implement** -- Execute tasks with automatic progress tracking\n4. **Validate** -- Check artifact, task, hook, and spec-vs-code drift\n5. **Archive** -- Store change artifacts and accumulate knowledge base\n\n**Key Features**:\n- Human-in-the-loop at critical gates (scope, design, destructive changes), auto-pilot for routine steps\n- Persistent multi-change state tracking -- resume interrupted workflows without re-explaining\n- Customizable config, schema templates, and hook points for injecting MCP tools and skills per team workflow\n- Archive knowledge accumulation across projects",
+    "displayName": "Codex SDD Loop",
+    "shortDescription": "Spec-driven loop engineering runtime for Codex",
+    "longDescription": "Codex SDD Loop transforms AI coding from one-shot code generation into a structured, auditable loop engineering workflow.\n\n**Workflow**:\n1. **Propose** -- Generate change-scoped proposal artifacts under openspec/changes/<changeId>\n2. **Plan** -- Create specs, design, tasks, verification, and implementation notes from schema templates\n3. **Implement** -- Execute tasks with automatic progress tracking\n4. **Validate** -- Check artifact, task, hook, evidence, and spec-vs-code drift\n5. **Archive** -- Store change artifacts and accumulate knowledge base\n\n**Key Features**:\n- Goal-compatible loop runtime with status, blockers, evidence, and human reviews\n- Human-in-the-loop at critical gates (scope, design, validation, archive, destructive changes), auto-pilot for routine steps\n- Persistent multi-change state tracking -- resume interrupted workflows without re-explaining\n- Customizable config, schema templates, and hook points for injecting MCP tools and skills per team workflow\n- Archive knowledge accumulation across projects",
     "developerName": "ZITIAN ZHAO",
     "category": "Developer Tools",
     "capabilities": [
@@ -29,9 +31,9 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use openspec-assistant to start a new feature proposal",
-      "Show the current OpenSpec change status",
-      "Continue the current OpenSpec implementation"
+      "Use Codex SDD Loop to start a new feature proposal",
+      "Show the current Codex SDD Loop change status",
+      "Continue the current Codex SDD Loop implementation"
     ],
     "brandColor": "#2563EB",
     "composerIcon": "./assets/project-hero.png",

@@ -412,7 +412,7 @@ function createDefaultSchema(projectRoot: string): void {
     path.join(schemaDir, 'schema.yaml'),
     `name: spec-driven
 version: 1
-description: Default OpenSpec Assistant workflow
+description: Default Codex SDD Loop workflow
 artifacts:
   - id: proposal
     generates: proposal.md

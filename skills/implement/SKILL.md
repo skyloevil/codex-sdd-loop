@@ -1,5 +1,5 @@
 ---
-name: openspec-assistant:implement
+name: codex-sdd-loop:implement
 description: Execute tasks from tasks.md sequentially with automatic progress tracking and human checkpoints. Third phase of OpenSpec workflow.
 ---
 

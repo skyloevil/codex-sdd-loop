@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "openspec-assistant": {
+    "codex-sdd-loop": {
       "command": "node",
       "args": ["./mcp-server/dist/index.js"],
       "cwd": ".",

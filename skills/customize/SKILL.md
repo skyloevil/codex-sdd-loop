@@ -1,12 +1,12 @@
 ---
-name: openspec-assistant:customize
+name: codex-sdd-loop:customize
 description: Guide for injecting custom MCP tools, skills, and hook points into the OpenSpec workflow for team-specific processes.
 ---
 
 # OpenSpec Customize
 
 ## Context
-OpenSpec Assistant is designed to be extensible. Teams can inject custom workflows
+Codex SDD Loop is designed to be extensible. Teams can inject custom workflows
 at key hook points throughout the lifecycle. This skill documents how to extend
 the plugin with team-specific MCP tools, skills, and scripts.
 
@@ -62,7 +62,7 @@ Example — adding a TAPD requirement fetcher:
 ```json
 {
   "mcpServers": {
-    "openspec-assistant": { ... },
+    "codex-sdd-loop": { ... },
     "tapd-requirement": {
       "command": "node",
       "args": ["path/to/tapd-mcp-server/index.js"]
@@ -126,7 +126,7 @@ For custom configurations, set environment variables in `.mcp.json`:
 ```json
 {
   "mcpServers": {
-    "openspec-assistant": {
+    "codex-sdd-loop": {
       "command": "node",
       "args": ["mcp-server/dist/index.js"],
       "env": {}

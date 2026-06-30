@@ -40,7 +40,7 @@ import type { ArtifactId, GateMode, HookKind, HookStatus, HumanGate, HumanReview
 
 const server = new Server(
   {
-    name: 'openspec-assistant',
+    name: 'codex-sdd-loop',
     version: '0.3.0',
   },
   {
@@ -64,12 +64,12 @@ const workDirSchema = {
 const TOOL_DEFINITIONS = [
   {
     name: 'openspec_detect_layout',
-    description: 'Scan the project for OpenSpec Assistant dirs, changes, files, and state.',
+    description: 'Scan the project for Codex SDD Loop dirs, changes, files, and state.',
     inputSchema: { type: 'object', properties: { workDir: workDirSchema, response_format: responseFormatSchema } },
   },
   {
     name: 'openspec_get_status',
-    description: 'Get active change status, gates, paths, next action, and full v2 state summary.',
+    description: 'Get active change status, gates, paths, next action, and full v3 state summary.',
     inputSchema: { type: 'object', properties: { workDir: workDirSchema, response_format: responseFormatSchema } },
   },
   {
@@ -562,7 +562,7 @@ function dispatchTool(name: string, args: Record<string, unknown>, projectRoot: 
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error('OpenSpec Assistant MCP server started on stdio');
+  console.error('Codex SDD Loop MCP server started on stdio');
 }
 
 main().catch((error) => {
